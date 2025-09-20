@@ -1,22 +1,29 @@
-let paraEle = document.createElement("p");
-let paraEle1 = document.createElement("p");
-let paraEle2 = document.createElement("p");
+let inp = document.querySelector(".inp");
+let addTask = document.querySelector(".addTask");
 
-let divEle = document.querySelector(".temp");
+addTask.addEventListener("click", (e) => {
+	if (inp.value) {
+		// console.log(inp.value);
 
-paraEle.textContent = "hello";
-paraEle1.textContent = "world";
-paraEle2.textContent = "CMR";
-paraEle.classList.add("ptext");
-divEle.appendChild(paraEle);
-divEle.appendChild(paraEle1);
-divEle.classList.add("colBlue");
+		// createELe task  div
+		let task = document.createElement("div");
 
-divEle.insertAdjacentElement("afterbegin", paraEle2);
-// divEle.insertAdjacentHTML("afterbegin", "<h3>qwerty</h3>");
+		task.classList.add("task");
+		//      createELe taskdes  p
+		let taskDes = document.createElement("p");
+		taskDes.classList.add("taskDes");
+		taskDes.textContent = inp.value;
 
-// setTimeout(() => {
-// 	divEle.classList.remove("colBlue");
-// }, 2000);
+		task.appendChild(taskDes);
 
-console.log(paraEle.classList, divEle.classList);
+		//      createELe taskDel  btn
+		let delBtn = document.createElement("button");
+		delBtn.textContent = "❌";
+		delBtn.classList.add("delTask");
+
+		task.appendChild(delBtn);
+
+		document.querySelector(".box2").appendChild(task);
+		console.log(task);
+	}
+});
