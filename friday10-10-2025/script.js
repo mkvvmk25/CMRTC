@@ -1,17 +1,33 @@
-let ele = document.querySelector(".ele");
+// let ele = document.querySelector(".ele");
 // let body = document.querySelector("body");
 // let body = ele.parentElement;
 // body.style.backgroundColor = "red";
+// ele.nodeValue;
+// console.log(ele.textContent);
+
+// let inp = ele.previousSibling.previousSibling;
+// console.log(inp.nodeValue);
 
 // console.log(ele.parentElement);
 
+// let eleChilds = ele.childNodes;
+// console.log(eleChilds);
 
-let eleChilds = ele.childNodes;
-console.log(eleChilds[0].nextSibling);
-
-
+// eleChilds.forEach((e, ind, arr) => {
+// 	if( e.nodeName !== "#text")
+//   e.style.color = "red";
+// });
+// console.log(eleChilds);
 
 // ele.childNodes[1].firstChild.nodeValue = "Asdasd";
+// console.log(
+// 	this.setTimeout(() => {
+// 		this.alert("trdfdfd");
+// 	}, 5000)
+// );
+
+// let f = confirm("are u sad??");
+// console.log(f);
 
 // console.log(ele.parentNode.style.backgroundColor="red");
 // console.log(ele.nextSibling);
@@ -23,7 +39,7 @@ console.log(eleChilds[0].nextSibling);
 // console.log(window.location.pathname); // Path after domain
 
 // setTimeout(() => {
-// 	window.location.reload();
+// window.location.reload();
 // }, 1000);
 
 // console.log("Browser Name:", window.navigator.appName);
@@ -45,6 +61,7 @@ console.log(eleChilds[0].nextSibling);
 // Navigate back or forward
 // window.history.back();
 // window.history.forward();
+// console.log(history);
 
 // console.log("Screen Width:", screen.width);
 // console.log("Screen Height:", screen.height);
@@ -52,3 +69,37 @@ console.log(eleChilds[0].nextSibling);
 // console.log("Available Height:", screen.availHeight);
 // console.log("Color Depth:", screen.colorDepth);
 // console.log("Pixel Depth:", screen.pixelDepth);
+
+// ajax
+// asyncronous js
+
+// console.log(1);
+// console.log(2);
+// setTimeout(() => {
+// 	console.log(5);
+// }, 0);
+
+// console.log(3);
+// console.log(4);
+// console.log(8);
+
+// https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json
+
+// "qwrtyu".toLowerCase().indexOf(1);
+
+let p = fetch(
+	"https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json"
+).then(
+	(f) => {
+		console.log(1);
+	},
+	(r) => {
+		console.log(2);
+	}
+);
+// then handler
+// async await
+// console.log(p);
+
+// 2xx
+// 205
